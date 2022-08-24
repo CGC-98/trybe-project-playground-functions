@@ -49,10 +49,8 @@ function highestCount(biggerArray) {
 // Desafio 7
 function catAndMouse(rat, cat1, cat2) {
   // seu código aqui
-  let tom = rat - cat1;
-  let butch = rat - cat2;
-  tom = Math.abs(tom);
-  butch = Math.abs(butch);
+  let tom = Math.abs(rat - cat1);
+  let butch = Math.abs(rat - cat2);
   let output;
   if (tom < butch) {
     output = 'cat1';
