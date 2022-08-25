@@ -63,31 +63,46 @@ function catAndMouse(rat, cat1, cat2) {
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 8
 function fizzBuzz(numberArray) {
   // seu código aqui
   let flag = [];
-  for (let i in numberArray) {
-    if (nothing(numberArray[i])) {
-      flag.push('bug!');
-    } if (double(numberArray[i])) {
-      flag.push('fizzBuzz');
-    } else if (numberArray[i] % 3 === 0) {
+  for (let i of numberArray) {
+    if (doubleAndNothing(i)) {
+      if (doubleOrNothing(i)) {
+        flag.push('fizzBuzz');
+      } else {
+        flag.push('bug!');
+      }
+    } else if (threeOrFive(i)) {
       flag.push('fizz');
-    } else if (numberArray[i] % 5 === 0) {
-      flag.push('buzz')
+    } else {
+      flag.push('buzz');
     }
-  }
-  return flag;
+  } return flag;
 }
 
-function double(x) {
-  return (x % 3 === 0 && x % 5 === 0);
+function doubleAndNothing(x) {
+  return (x % 3 === 0 && x % 5 === 0) || (x % 3 !== 0 && x % 5 !== 0);
 }
 
-function nothing(y) {
-  return (y % 3 !== 0 && y % 5 !== 0);
+function doubleOrNothing(x) {
+  return x % 3 === 0 && x % 5 === 0
 }
+
+function threeOrFive(y) {
+  return y % 3 === 0;
+}
+
+// function threeOrFive(y) {
+//   let flag = 0;
+//   if (y % 3 === 0) {
+//     flag = 2;
+//   } else if (y % 5 === 0) {
+//     flag = 1;
+//   } return flag;
+// }
 
 // Desafio 9
 function encode() {
