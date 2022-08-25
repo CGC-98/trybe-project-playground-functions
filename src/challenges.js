@@ -74,7 +74,7 @@ function fizzBuzz(numberArray) {
     } else if (i % 5 === 0) {
       flag.push('buzz');
     } else {
-      flag.push('bug!')
+      flag.push('bug!');
     }
   } return flag;
 }
