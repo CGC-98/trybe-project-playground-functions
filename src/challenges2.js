@@ -42,9 +42,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drink) {
   // seu código aqui
+  let regex = drink.match(/\d+/g);
+  let water = 0;
+  let tip = '';
+  for (let i in regex) {
+    water += Number(regex[i]);
+  } if (water != 1) {
+    tip += water;
+    tip += ' copos de água';
+  } else {
+    tip = '1 copo de água';
+  } return tip;
 }
+
+console.log(hydrate('01 a, 5 b e 1 c'));
 
 module.exports = {
   generatePhoneNumber,
