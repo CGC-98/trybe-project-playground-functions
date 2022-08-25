@@ -8,7 +8,7 @@ function generatePhoneNumber(x) {
   } else {
     for (let i in x) {
       if (!pattern) {
-        pattern = false
+        pattern = false;
       } else {
         if (!amount[x[i]]) {
           amount[x[i]] = 1;
@@ -20,12 +20,12 @@ function generatePhoneNumber(x) {
           pattern = false;
         } else if (i < 2) {
           pattern += x[i];
-        } else if (i == 2) {
+        } else if (i === '2') {
           pattern += ') ';
           pattern += x[i];
         } else if (i > 2 && i < 7) {
           pattern += x[i];
-        } else if (i == 7) {
+        } else if (i === '7') {
           pattern += '-';
           pattern += x[i];
         } else if (i > 7) {
@@ -39,7 +39,7 @@ function generatePhoneNumber(x) {
   return pattern;
 }
 
-console.log(generatePhoneNumber([0, 0, 0, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(generatePhoneNumber([0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
