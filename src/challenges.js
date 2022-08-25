@@ -62,41 +62,36 @@ function catAndMouse(rat, cat1, cat2) {
   return output;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 8
-function doubleAndNothing(x) {
-  return (x % 3 === 0 && x % 5 === 0) || (x % 3 !== 0 && x % 5 !== 0);
-}
-
-function doubleOrNothing(x) {
-  return x % 3 === 0 && x % 5 === 0;
-}
-
 function fizzBuzz(numberArray) {
   // seu código aqui
   let flag = [];
   for (let i of numberArray) {
-    if (doubleAndNothing(i)) {
-      if (doubleOrNothing(i)) {
-        flag.push('fizzBuzz');
-      } else {
-        flag.push('bug!');
-      }
+    if (i % 3 === 0 && i % 5 === 0) {
+      flag.push('fizzBuzz');
     } else if (i % 3 === 0) {
       flag.push('fizz');
-    } else {
+    } else if (i % 5 === 0) {
       flag.push('buzz');
+    } else {
+      flag.push('bug!')
     }
   } return flag;
 }
 
 // Desafio 9
-function encode() {
+function encode(stringEncode) {
   // seu código aqui
+  let stringReplace1 = stringEncode.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3');
+  let stringReplace2 = stringReplace1.replace(/o/g, '4').replace(/u/g, '5');
+  return stringReplace2;
 }
-function decode() {
+
+function decode(stringDecode) {
   // seu código aqui
+  let stringReplace1 = stringDecode.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i');
+  let stringReplace2 = stringReplace1.replace(/4/g, 'o').replace(/5/g, 'u');
+  return stringReplace2;
 }
 
 // Desafio 10
