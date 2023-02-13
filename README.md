@@ -1,5 +1,6 @@
 Projeto concluso, baseado em Playground Functions pela Trybe;
-Arquivos excedentes a serem descartados;
+
+Teve como intuito aplicar os fundamentos basais da lógica de programação endereçada ao JavaScript, desde as regras de sintaxe básicas até solução de problemas com uso de estruturas de repetição compostas.
 
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
